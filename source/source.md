@@ -496,3 +496,43 @@ let arr = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10, [11, [12, 13]]];
 
 console.log(flatten(arr));
 ```
+
+### reduce()的用法
+
+```js
+arr.reduce((accumulator, currentValue, index, array) => {
+	// return 新的 accumulator
+}, initialValue);
+```
+
+- accumulator：累加器，记录上一次返回的结果
+- currentValue：当前处理的数组元素
+- initialValue：第一次执行时 accumulator 的初始值（建议总是传）
+
+```js
+// 数组求和
+const nums = [1, 2, 3, 4];
+const sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+
+// 扁平化嵌套数组
+const nested = [
+	[1, 2],
+	[3, 4]
+];
+const flat = nested.reduce((acc, curr) => acc.concat(curr), []);
+console.log(flat); // [1, 2, 3, 4]
+
+// 统计字符串中字符出现次数
+const chars = ["a", "b", "a", "c", "b"];
+const count = chars.reduce((acc, char) => {
+	acc[char] = (acc[char] || 0) + 1;
+	return acc;
+}, {});
+console.log(count); // { a: 2, b: 2, c: 1 }
+
+// 找出最大值
+const nums = [5, 10, 3, 8];
+const max = nums.reduce((acc, curr) => (curr > acc ? curr : acc), nums[0]);
+console.log(max); // 10
+```
