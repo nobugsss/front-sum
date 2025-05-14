@@ -216,7 +216,20 @@ Composite 模式：
 - Core Web Vitals（FCP、LCP、CLS、TTFB、INP）
 - 使用监控工具（如 Sentry、LogRocket、阿里云前端监控）采集真实用户性能数据
 
-###
+### 前端性能分析
+
+chrome Lighthouse 最新规则，前端性能指标考量主要有
+
+- **FCP（First Contenful Paint）**
+  - 首次内容绘制是指测量页面从开始加载到页面内容（文本、图片、背景图、svg 元素或非白色 canvas 元素）的任何部分在屏幕上完成渲染的时间
+- **SI（Speed Index）**
+  - 衡量页面加载期间内容以视觉方式显示的速度。通俗的讲，就是网页从有东西到完全显示内容的可见填充速度。
+- **LCP（Largest Contentful Paint）**
+  - 最大（最有意义）内容绘制，是指根据页面首次开始加载的时间点来报告可视区域内可见的最大图像或者文本块完成渲染的相对时间。
+- **TBT（Total Blocking Time）**
+  - 总阻塞时间，是页面被阻塞响应用户交互的总时间。
+- **CLS（Cumulative Layout Shift）**
+  - 累计布局偏移（CLS）是测量视觉稳定性的重要指标。是整个页面声明周期内发生的所有意外布局偏移中最大一连串的布局偏移分数。
 
 ###
 
