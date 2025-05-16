@@ -170,8 +170,9 @@ Composite 模式：
 
 **资源加载顺序优化**
 
-- CSS 放 <head>，JS 放 <body> 尾部或 defer
+- CSS 放 `<head>`，JS 放 `<body> `尾部或 defer
 - 使用 async / defer 控制 JS 加载顺序
+
 - preload / prefetch / preconnect：提前加载关键资源
 
 **首屏加载优化**
