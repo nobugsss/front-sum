@@ -11,6 +11,7 @@ class 继承里有二种情况：
 
 在对象里：
 
+- 指向当前对象的原型对象
 - super 关键字表示原型对象时，只能用在对象的方法之中，用在其他地方都会报错。
 
 ```js
@@ -47,6 +48,7 @@ const obj = {
 Object.setPrototypeOf(obj, proto);
 
 obj.foo(); // "world"
+// super.foo指向原型对象proto的foo方法，但是绑定的this却还是当前对象obj，因此输出的就是world。
 ```
 
 ### 声明变量的六种方法

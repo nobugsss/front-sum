@@ -108,6 +108,7 @@ _tips: DTTV（Debounce Timer Throttle Variable - 防抖靠定时器控制，节�
 - Generator 函数是 ES6 对协程的实现，Generator 函数被称为“半协程”，意思是只有 Generator 函数的调用者，才能将程序的执行权还给 Generator 函数。如果是完全执行的协程，任何函数都可以让暂停的协程继续执行。
 - Generator 函数是一个状态机，封装了多个内部状态。
 - 返回的也不是函数运行结果，而是一个指向内部状态的指针对象。
+- 它执行产生的上下文环境，一旦遇到 yield 命令，就会暂时退出堆栈，但是并不消失，里面的所有变量和对象会冻结在当前状态。等到对它执行 next 命令时，这个上下文环境又会重新加入调用栈，冻结的变量和对象恢复执行。
 
 [详情](https://es6.ruanyifeng.com/#docs/generator)
 
