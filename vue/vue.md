@@ -12,11 +12,13 @@
 **父子组件通信**
 
 - props + emit
-- $refs + $parent
+- $refs + $parent(vue2)
 - provider/inject
   **兄弟组件通信**
-- eventBus
-- $parent.$refs
+- eventBus(vue2)(有三方库)
+- $parent.$refs(vue2)
+- provider/inject
+- mitt 库
 
 ### Vue 中 computed 和 watch 的差异？
 
@@ -36,7 +38,9 @@
 - initProvide，对依赖注入进行解析；
 - 完成对数据（state 状态）的初始化后，触发生命周期钩子 created；
 - 进入挂载阶段，将 vue 模板语法通过 vue-loader 解析成虚拟 DOM 树，虚拟 DOM 树与数据完成双向绑定，触发生命周期钩子 beforeMount；
-- 将解析好的虚拟 DOM 树通过 vue 渲染成真实 DOM，触发生命周期钩子 mounted；
+-
+
+DOM 树通过 vue 渲染成真实 DOM，触发生命周期钩子 mounted；
 
 ### reactive()局限性
 
